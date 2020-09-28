@@ -46,7 +46,7 @@
 		margin: auto;
 		width: auto;
 		font-size: 1.2rem;
-
+		transition-duration: 0.5s;
 	}
 	
 	a {
@@ -59,6 +59,54 @@
 		text-decoration: none;
 	}
 }
+
+// Dropdown menu //
+.topNav (
+	li:hover,
+	li:focus-within {
+	  cursor: pointer;
+	}
+
+	.dropdown {
+		padding: 10px;
+		border-top: 1px solid $red-bg;
+		width: 200px;
+	}
+
+	ul li ul {
+	  background: $secondary-bg;
+	  visibility: hidden;
+	  opacity: 0;
+	  min-width: 5rem;
+	  position: absolute;
+	  transition: all 0.5s ease;
+	  margin-top: 1rem;
+	  left: 44px;
+	  display: none;
+	  
+		  li {
+			display: block;
+			padding: 10px;
+			clear: both;
+  			width: 100%;
+			
+			a {
+				font-size: .9rem;
+			}
+		}
+	}
+	
+	ul li:hover > ul,
+	li:focus-within > ul,
+	ul li ul:hover,
+	ul li ul:focus {
+	  visibility: visible;
+	  opacity: 1;
+	  display: block;
+	}
+
+}
+
 
 @media only screen and (max-width: 768px) {
 	.logo {
