@@ -1,0 +1,26 @@
+$primary-bg: #000;
+$secondary-bg: #222;
+$light-bg: #fff;
+
+$primary-text-color: #fff;
+$primary-font: Gotham,Helvetica,Arial,sans-serif;
+$primary-font-weight: 300;
+$secondary-text-color: #ff3b3b;
+$primary-button-color: #d72029;
+$dark-text-color: #000;
+
+body {
+	background-color: $primary-bg;
+	font-family: $primary-font;
+	font-size: 100%;
+	font-weight: $primary-font-weight;
+}
+
+.center {
+  margin: auto;
+}
+
+// Turn off on Mobile //
+.mobile {
+	display: none !important;
+}

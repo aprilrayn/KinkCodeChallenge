@@ -1,0 +1,98 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<!-- TOP NAVIGATION -->
+<!-- I WOULD SUSPECT WITH NUNJUKS THE TOP NAVIGATION AREA WOULD BE IT'S OWN NODE, AS WELL AS THE FOOTER AND OTHER COMMONLY
+     USED ELEMENTS FOR SCALABILITY.  I COULDN'T QUITE IDENTIFY HOW THE NODES ARE BEING CALLED SO I WAS NOT ABLE TO DO
+	 THIS.  WHEN I'M NOT USING A CMS I COMMONLY USED INCLUDES FOR JUST THESE TYPES OF ELEMENTS SO THE CONCEPT IS VERY
+	 FAMILIAR TO ME EVEN IF THIS PARTICULAR METHOD IS NOT -->
+<div class="navigation">
+	<!-- NAVIGATION MENU --> 
+	<div class="containerNav">
+		<!-- TO CONFORM TO THE TIMEFRAME I DID NOT HAVE TIME TO SET UP THE DROP MENU/SECONDARY NAVIGATION FUNCTIONALITY. 
+		     I WANTED TO DO THE RESPONSIVE MENU FUNCTIOALITY FIRST. -->
+        <div class="topNav center">
+              <nav role="navigation">
+                <div id="menuToggle">
+                  <input type="checkbox" class="navMenu" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                	<ul id="menu">
+                        <li class="mobile"><a href="/">Home</a></li>
+                        <li><a href="browse.html">Browse</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="cams.html">Cams</a></li>
+                        <li><a href="vr.html">VR</a></li>
+                        <li><a href="help.html">Help</a></li>
+                	</ul>
+               </div>
+            </nav>
+        </div>
+    </div>
+    <!-- LOGO -->
+	<div class="containerLogo">
+    	<a href="/" id="home" role="menuitem" tabindex="1" class="logo"></a>
+    </div>
+    <!-- SEARCH -->
+    <div class="search">
+    	<form>
+          	<input type="text" name="search">
+        </form>
+    </div>
+</div>
+
+<!-- PAGE BODY -->
+<div class="pageBody">
+<!-- SECTION ONE -->
+	<div class="containerOne">
+    	<!-- MAIN TEXT -->
+    	<div class="textArea">
+        	<h1>Lorem ipsum dolor sit amet</h1>
+			<p>Fusce nunc mi, blandit tincidunt justo vitae, aliquet pretium felis. Vivamus faucibus eros nec quam consectetur pretium non id velit. Praesent in iaculis eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In a suscipit nunc. Sed bibendum diam vel ultricies venenatis. Aenean vulputate consequat posuere. Phasellus eget tincidunt risus. Morbi dignissim gravida arcu ut dignissim. Aenean sed augue magna. Phasellus non arcu at odio vehicula malesuada. Nulla vehicula laoreet nulla.</p>
+            <p>Ut egestas mauris eu metus interdum, in tempor ligula pulvinar. Sed nibh ipsum, sodales sed ante eu, ultrices tincidunt mauris. Mauris eleifend lacus in consequat euismod. Vestibulum eu sollicitudin sem. Fusce ac odio sapien. Suspendisse vel neque risus. In quam orci, efficitur eget eros at, pharetra porttitor nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacinia, arcu sodales tincidunt consequat, sapien erat pharetra diam, a varius odio nunc at eros. Aenean porttitor turpis urna, sed pretium elit luctus at. Donec egestas finibus massa ut vulputate. Ut id ipsum lorem. Fusce accumsan elementum iaculis.</p>
+            <p>Maecenas viverra sed velit nec sagittis. Aliquam erat volutpat. Curabitur et efficitur ligula. Curabitur nec tempor nibh, nec consectetur dolor. Proin ex ante, sodales eu faucibus vel, rutrum id odio. Pellentesque et vulputate massa. Nullam a rutrum nisl. Cras eu condimentum massa. Nunc sapien arcu, eleifend in ullamcorper lobortis, vehicula a elit. Ut vehicula ornare ligula eget tincidunt. Donec a auctor urna.</p>
+            <p class="ctaLink"><a href="signup.html">Lock in my Membership!</a></p>
+        </div>
+        <!-- MAIN IMAGE -->
+        <div class="imageArea">
+        	<img src="/assets/placeholder.png" width="720" height="720" alt=""/>
+        </div>
+    </div>
+
+<!-- COMMENT SECTION -->    
+    <div class="containerTwo">
+    	<div class="formArea">
+        	<h1>Let's hear it</h1>
+            <!-- COMMENT FORM -->
+			<!-- I DID NOT HAVE A CHANCE TO CREATE A SUBMITTED MESSAGE. MOSTLY DUE TO MY INFAMILIARITY
+			     WITH NUNJUKS.  BUT I CAN DEFINITELY LEARN QUICKLY AS I HAVE CREATED NUMEROUS SUBMIT
+				 FORMS WITH SUBMIT MESSAGES. -->  
+            <form class="commentForm">
+            	<input type="text" placeholder="Username" required="" oninvalid="this.setCustomValidity('Please Enter your username or email')" oninput="setCustomValidity('')">
+                <textarea placeholder="Comments" required="" oninvalid="this.setCustomValidity('Please Enter a comment')" oninput="setCustomValidity('')"></textarea>
+                <input type="submit">
+            </form>
+        </div>
+        <div class="commentArea">
+        	<!-- USER COMMENTS -->
+        	<h2>Comments</h2>
+            <ul>
+            	<li><span class="userName">poezwoef</span><br />
+                Pellentesque commodo augue dapibus ullamcorper maximus. Mauris faucibus fringilla leo. </li>
+                <li><span class="userName">curuno</span><br />
+                Cras tristique augue enim, id vestibulum ante tincidunt ac. Sed euismod mauris vel erat imperdiet, pellentesque cursus neque lobortis.</li>
+                <li><span class="userName">smoken</span><br />
+                Aliquam in purus velit. Vivamus vitae condimentum velit, a aliquam elit. Aenean commodo finibus diam sed auctor. </li>
+                <li><span class="userName">doorman59</span><br />
+                Aenean lacinia nibh velit, id tincidunt urna blandit sed. Maecenas tristique hendrerit vestibulum.</li>
+            </ul>
+            <a href="#" class="button cta-button view-comments">View all comments</a>
+        </div>
+    </div>
+</div>
+
+<!-- FEELS WEIRD WITHOUT A FOOTER! -->
+{% endblock %}

@@ -1,0 +1,110 @@
+/* Scss Document */
+
+/* BODY CONTENT STYLES */
+.pageBody {
+	margin: 1rem;
+	padding: 1rem;
+}
+
+.containerOne {
+	margin: auto;
+	overflow: hidden;
+	
+	.textArea {
+		width: 60%;
+		float: left;
+	}
+	
+	.imageArea {
+		width: 40%;
+		overflow: hidden;
+		
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.containerTwo {
+	margin: auto;
+	background-color: $secondary-bg;
+	margin-top: 3rem;
+	padding: 2rem;
+	overflow: hidden;
+	
+	.formArea {
+		width: 45%;
+		float: left;
+		
+		.commentForm {
+			padding-right: 2rem;	
+		}
+	}
+	
+	.commentArea {
+		width: 55%;
+		overflow: hidden;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.pageBody {
+		clear: both;
+		margin: 4.25rem .25rem .25rem .25rem;
+		padding: .25rem;
+	}
+	
+	.containerNav {
+		margin-top: .625rem; 
+		margin-left: 0;
+		Display: flex;
+		align-items: center;
+		width: 50px;
+		float: left;
+		position: relative;
+	  
+	  	.center {
+			margin: 0;
+		}
+	}
+	
+	.containerLogo {
+		float: left;
+		width: 50px;
+	}
+
+	.containerOne {
+		.textArea {
+			width: 70%;
+		}
+	
+		.imageArea {
+			width: 30%;
+		}
+	}
+	
+	.containerTwo .formArea,
+	.containerTwo .commentArea {
+		width: 50%;
+	}
+
+}
+
+@media only screen and (max-width: 481px) {
+	.containerOne .textArea, 
+	.containerOne .imageArea, 
+	.containerTwo .formArea, 
+	.containerTwo .commentArea {
+		width: 100%;
+	}
+	
+	.containerOne .textArea p {
+		padding-right: 0;
+	}
+	
+	.containerOne .imageArea img {
+		margin-top: 20px;
+	}
+}
+

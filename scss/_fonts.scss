@@ -1,0 +1,67 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li {
+	color: $primary-text-color;
+	font-weight: $primary-font-weight;
+	line-height: 1.4rem;
+}
+
+h1,
+h2 {
+	font-size: 1.65rem;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+p, 
+li {
+	font-size: .88rem;
+}
+
+a {
+	color: $secondary-text-color;
+	text-decoration: none;
+}
+
+.ctaLink a {
+	font-size: 1.2rem;
+}
+
+.textArea p {
+	padding-right: 2rem;
+}
+
+.formArea h1 {
+	font-size: 3rem;
+}
+
+.commentArea {
+	ul {
+		list-style-type: none; 
+		padding: 0; 
+		margin: 0; 
+	}
+	
+	li {
+		margin-bottom: 1rem; 
+	}
+	
+	.userName {
+		font-weight: 600; 
+	}
+}
+
+@media only screen and (max-width: 481px) {
+	h1,
+	h2 {
+		font-size: 1.5rem;
+	}
+	
+	.formArea h1 {
+		font-size: 2.5rem;
+	}
+}
